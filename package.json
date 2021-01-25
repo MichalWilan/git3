@@ -1,23 +1,22 @@
 {
-  "name": "git3",
+  "name": "task-runner",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "init-project": "npm install && npm run init:dirs && npm run init:files && npm run init:gitignore",
+    "init:dirs": "mkdirp sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MichalWilan/git3.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MichalWilan/git3/issues"
-  },
-  "homepage": "https://github.com/MichalWilan/git3#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.13"
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.26.13",
+    "html-validate": "^4.3.0",
+    "mkdirp": "^1.0.4"
   }
 }
